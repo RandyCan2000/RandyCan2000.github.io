@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Proyecto</title>
+  <base href="/"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body id="Cuerpo">
+  
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" id="Barra" style="position:static;">
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img src="assets/Imagenes/herramientas.png" style="width: 50px; height:50px;"></a>
+                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item"><input id="Abrir" type="file" (change)="leerArchivo($event.target.files)" accept=".cs"></a>
+                <a class="dropdown-item" href="#" (click)="Analizar()" >ANALIZAR</a>
+                <a class="dropdown-item" href="#" (click)="Traduccion()">TRADUCIR</a>
+                </div>
+            </li>
+            </ul>
+            <a class="navbar-brand" href="#" style="margin-right: 50%;">TRADUCTOR</a>
+      </div>
+      </nav>
+      <div id="Botones" style="height: 65px;">
+      
+      </div>
+      <h6 id="NombreSeleccion" style="text-align: center;"></h6>
+      <div id="CajasTexto">
+      
+      </div>
+      <div id="BotonesReportes">
+        <button id="Boton" (click)="MostarRep('CONSOLA')">CONSOLA</button>
+        <button id="Boton" (click)="MostarRep('HTML')">HTLM</button>
+        <button id="Boton" (click)="MostarRep('JSON')">JSON</button>
+        <button id="Boton" (click)="MostarRep('VARIABLES')">VARIABLES</button>
+      </div>
+      <div id="Reportes">
+          <div id="VARIABLES" style="overflow:scroll;">
+            <table id="RepText" border="1" style="position: absolute; left: 5%; top: 5%;color: white;border-color: white;">
+              <tr>
+                <td> NOMBRE </td>
+                <td> TIPO </td>
+                <td> LINEA </td>
+              </tr>
+            </table>
+          </div>
+          <div id="CONSOLA">
+            <textarea id="RepText" class="CONSOLA" style="resize: none;width: 100%;height: 100%; overflow:scroll;"></textarea>
+          </div>
+          <div id="HTML">
+            <textarea id="RepText" class="HTML" style="resize: none;width: 100%;height: 100%; overflow:scroll;"></textarea>
+          </div>
+          <div id="JSON">
+            <textarea id="RepText" class="JSON"style="resize: none; width: 100%;height: 100%; overflow:scroll;"></textarea>
+          </div>
+      </div>
+    
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
+</body>
+</html>
